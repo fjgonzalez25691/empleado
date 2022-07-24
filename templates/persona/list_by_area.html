@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+    
+{% block titulo %}
+    lista empleado por departamento
+{% endblock titulo %}  
+
+{% block content %}
+    {% include 'includes/header.html' %}
+    <div class="grid-container">
+        <div clas="grid-x">
+            <div class="cell">
+                <h1>Lista de empleados por departamento</h1>                
+            </div>
+            <div class="cell">
+                <table>
+                    <thead>
+                      <tr>
+                        <th width="100">ID</th>
+                        <th width="200">NOMBRE</th>    
+                        <th width="250">APELLIDOS</th>
+                        <th width="300">DEPARTAMENTO</th>
+                        <th with="150">ACCION</th>                       
+                      </tr>
+                    </thead>
+                    <tbody>
+                        {% for e in empleados %}
+                        <tr>
+                            <td>{{e.id}}</td>
+                            <td>{{e.first_name}}</td>
+                            <td>{{e.last_name}}</td>
+                            <td>{{e.Departamento}}</td>
+                            <td><a class="button warning" href="{% url 'persona_app:empleado-detail' e.id %}">Ver</a></td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>    
+{% endblock content %}
+    
