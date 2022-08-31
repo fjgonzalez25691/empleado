@@ -1,4 +1,3 @@
-from msilib.schema import Class
 from multiprocessing import context
 from django.urls import reverse_lazy
 from django.shortcuts import render
