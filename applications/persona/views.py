@@ -104,6 +104,7 @@ class EmpleadoCreateView(CreateView):
     template_name = "persona/add.html"
     model = Empleado
     form_class = EmpleadoForm
+    
     success_url = reverse_lazy('persona_app:empleados_admin')
     
     def form_valid(self, form):

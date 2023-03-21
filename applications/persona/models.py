@@ -17,9 +17,10 @@ class Habilidades(models.Model):
 class Empleado(models.Model):
     """ Modelo para tabla Empleados"""
     JOB_CHOICES = (
-        ('0', 'CONTADOR'),
-        ('1', 'ADMINISTRADOR'),
-        ('2', 'ECONOMISTAS'),
+        ('0', 'CONTABLE'),
+        ('1', 'ADMINISTATIVO'),
+        ('2', 'GERENTE'),
+        ('3', 'GESTOR')
         ('4',  'OTRO'),
     )
     first_name = models.CharField('Nombres', max_length=60)
